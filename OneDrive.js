@@ -1998,7 +1998,7 @@ module.exports = function (require, exports, OneDriveApp_1, Oauth_1) {
     exports.validateUrlProtocol = validateUrlProtocol;
     function validateRedirectUrlHost(url) {
         validateUrlProtocol(url);
-        if (!url.indexOf('://') > -1) {
+        if (url.indexOf('://') === -1) {
             ErrorHandler_1.throwError(new OneDriveSdkError_1.default(ErrorType_1.default.optionsError, 'redirect uri is not an absolute url')).exposeToPublic();
         }
     }
