@@ -723,7 +723,7 @@ module.exports = function (require, exports, OneDriveApp_1, Oauth_1) {
                 ErrorHandler_1.throwError(new OneDriveSdkError_1.default(ErrorType_1.default.badResponse, 'received bad state parameter from Oauth endpoint, state received: ' + response.state)).exposeToPublic();
             }
             if (channel) {
-                channel.send(OAUTH_RESPONSE_HEADER + JSON.stringify(response), window.location.origin);
+                channel.send(OAUTH_RESPONSE_HEADER + JSON.stringify(response), '*');
             } else {
                 ErrorHandler_1.throwError(new OneDriveSdkError_1.default(ErrorType_1.default.popupOpen, 'opener is not defined')).exposeToPublic();
             }
