@@ -1998,12 +1998,7 @@ module.exports = function (require, exports, OneDriveApp_1, Oauth_1) {
     exports.validateUrlProtocol = validateUrlProtocol;
     function validateRedirectUrlHost(url) {
         validateUrlProtocol(url);
-        if (url.indexOf('://') > -1) {
-            var domain = url.split('/')[2];
-            if (domain !== window.location.host) {
-                ErrorHandler_1.throwError(new OneDriveSdkError_1.default(ErrorType_1.default.optionsError, 'redirect uri is not in the same domain as picker sdk')).exposeToPublic();
-            }
-        } else {
+        if (!url.indexOf('://') > -1) {
             ErrorHandler_1.throwError(new OneDriveSdkError_1.default(ErrorType_1.default.optionsError, 'redirect uri is not an absolute url')).exposeToPublic();
         }
     }
