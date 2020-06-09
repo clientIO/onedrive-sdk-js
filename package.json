@@ -1,0 +1,19 @@
+{
+  "name": "onedrive-sdk",
+  "version": "1.0.0",
+  "description": "OneDrive file picker JavaScript SDK",
+  "main": "OneDrive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clientIO/onedrive-sdk-js.git"
+  },
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clientIO/onedrive-sdk-js/issues"
+  },
+  "homepage": "https://github.com/clientIO/onedrive-sdk-js#readme"
+}
